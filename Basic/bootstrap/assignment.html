@@ -1,346 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITCART - Tech Paradise</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            background-color: white;
-            font-family: Arial, sans-serif;
-            color: #212529;
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: #1c2126;
-            padding: 18px 24px;
-        }
-
-        .navbar-brand {
-            color: #0d6efd !important;
-            font-size: 20px;
-            font-weight: bold;
-            margin-right: 40px;
-        }
-
-        .navbar .nav-link {
-            color: #b8bec5;
-            margin-right: 8px;
-        }
-
-        .navbar .nav-link:hover,
-        .navbar .nav-link.active {
-            color: white;
-        }
-
-        /* Search */
-        .search-form {
-            display: flex;
-            gap: 8px;
-        }
-
-        .search-form input {
-            width: 190px;
-        }
-
-        /* Main layout */
-        .main-container {
-            margin-top: 65px;
-            margin-bottom: 70px;
-            min-height: 390px;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            padding-right: 20px;
-        }
-
-        .section-title {
-            color: #0d6efd;
-            font-size: 18px;
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #c8e6d6;
-        }
-
-        .sidebar-links {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 24px;
-        }
-
-        .sidebar-links li {
-            margin-bottom: 17px;
-        }
-
-        .sidebar-links a {
-            color: #212529;
-            font-size: 14px;
-            text-decoration: underline;
-        }
-
-        .sidebar-links a:hover {
-            color: #0d6efd;
-        }
-
-        /* Main content */
-        .content h1 {
-            font-size: 29px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .brand-highlight {
-            color: #0d6efd;
-        }
-
-        .content p {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        /* Footer note */
-        .footer-note {
-            font-size: 19px;
-            margin: 25px 0;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 991.98px) {
-            .navbar-brand {
-                margin-right: 0;
-            }
-
-            .search-form {
-                margin-top: 12px;
-                width: 100%;
-            }
-
-            .search-form input {
-                width: 100%;
-            }
-
-            .main-container {
-                margin-top: 35px;
-            }
-
-            .sidebar {
-                padding-right: 12px;
-                margin-bottom: 30px;
-            }
-
-            .content h1 {
-                font-size: 25px;
-            }
-        }
-
-        @media (max-width: 575.98px) {
-            .navbar {
-                padding: 12px;
-            }
-
-            .main-container {
-                margin-top: 25px;
-            }
-
-            .content h1 {
-                font-size: 23px;
-            }
-
-            .footer-note {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+     <div class="row" style="background-color: beige; height: 200px;">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="background-color: aqua; border: 1px solid beige; height:100px; ">div 1</div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="background-color: aqua; border: 1px solid beige; height:100px; ">div 2</div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="background-color: aqua; border: 1px solid beige; height:100px; ">div 3</div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="background-color: aqua; border: 1px solid beige; height:100px; ">div 4</div>
+    </div>
+    <!-- <nav class="navbar md:navbar-expand bg-1">
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="#">ITCART</a>
-
-            <!-- Mobile menu button -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer"
+                aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="mainNavbar">
-
-                <!-- Navigation links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-
-                    <!-- Account dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"
-                           href="#"
-                           id="accountDropdown"
-                           role="button"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Account
-                        </a>
-
-                        <ul class="dropdown-menu"
-                            aria-labelledby="accountDropdown">
-
-                            <li>
-                                <a class="dropdown-item" href="#">Login</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">Register</a>
-                            </li>
-
-                        </ul>
-                    </li>
-
-                </ul>
-
-                <!-- Search form -->
-                <form class="search-form" id="searchForm" role="search">
-
-                    <input class="form-control"
-                           type="search"
-                           id="searchInput"
-                           placeholder="Search site"
-                           aria-label="Search site">
-
-                    <button class="btn btn-primary" type="submit">
-                        Search
-                    </button>
-
-                </form>
-
-            </div>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                Menu
+                            </button>
+                            <div class="menu">
+                                <a class="menu-item" href="#">Action</a>
+                                <a class="menu-item" href="#">Another action</a>
+                                <hr class="menu-divider">
+                                <a class="menu-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="hstack gap-2" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn-solid btn-icon theme-secondary" type="submit">
+                            <svg class="bi" width="16" height="16">
+                                <use href="#search" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </dialog>
         </div>
-    </nav>
-
-    <!-- Main content -->
-    <main class="container main-container">
-
-        <div class="row">
-
-            <!-- Left sidebar -->
-            <aside class="col-lg-3 col-md-4 sidebar">
-               
-                <h2 class="section-title">Categories Available</h2>
-
-                <ul class="sidebar-links">
-                    <li><a href="#">Laptops</a></li>
-                    <li><a href="#">Personal Computers</a></li>
-                    <li><a href="#">Tablets</a></li>
-                    <li><a href="#">Headphones</a></li>
-                </ul>
-
-                <h2 class="section-title">Reviews</h2>
-
-                <ul class="sidebar-links">
-                    <li><a href="#">For Services</a></li>
-                    <li><a href="#">For Products</a></li>
-                    <li><a href="#">For Consultation</a></li>
-                </ul>
-
-            </aside>
-
-            <!-- Right content -->
-            <section class="col-lg-9 col-md-8 content">
-
-                <h1>
-                    India’s Leading and Trusted tech paradise -
-                    <span class="brand-highlight">ITCART</span>
-                </h1>
-
-                <p>
-                    Welcome to our tech paradise, where innovation meets
-                    convenience at the click of a button. Step into a world
-                    of cutting-edge technology and endless possibilities as
-                    you explore our curated collection of IT goods. From
-                    sleek laptops to powerful desktops, from state-of-the-art
-                    gadgets to must-have accessories, we have everything you
-                    need to stay ahead in the digital age. Whether you're a
-                    tech enthusiast, a professional, or simply looking to
-                    upgrade your devices, our comprehensive range has
-                    something for every need and budget.
-                </p>
-
-                <p>
-                    Navigate our user-friendly interface with ease, and
-                    discover the latest in tech trends and innovations.
-                    With detailed product descriptions and customer reviews,
-                    making informed decisions has never been easier.
-                    Experience unmatched convenience with our secure payment
-                    options and lightning-fast delivery services, ensuring
-                    that your tech essentials reach you when you need them
-                    most. Plus, with our dedicated customer support team,
-                    assistance is just a click away. Join our community of
-                    tech aficionados and elevate your digital lifestyle
-                    today. Welcome to ITCART, where the future is just a few
-                    clicks away!
-                </p>
-
-            </section>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="container">
-        <p class="footer-note">
-            Note: Use Latest Version of Bootstrap.
-        </p>
-    </footer>
-
-    <!-- Bootstrap JavaScript for dropdown and mobile navbar -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Search functionality -->
-    <script>
-        const searchForm = document.getElementById("searchForm");
-
-        searchForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const searchText = document
-                .getElementById("searchInput")
-                .value.trim();
-
-            if (searchText === "") {
-                alert("Please enter something to search.");
-            } else {
-                alert("You searched for: " + searchText);
-            }
-        });
-    </script>
-
+    </nav> -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
