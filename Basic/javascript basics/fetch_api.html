@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        fetch(url)
+        its is used to sedn the request from client to server and get the response from server to client
+        it returns a promise which can be handled using then, catch and finally methods
+        if the promis is rolved, 
+        the reponse catured here is acomplex object, that holds data( is reponse body)and other details(status,....)
+        we need d to return another promise by calling resp.json(), that extract the json data from the response body and return it to the next then method
+        */
+        fetch('https://dummyjson.com/products')
+            .then(resp => {
+                console.log(resp);
+                return resp.json();
+            })
+            .then(data => console.log(data))
+            .catch(err => console.error(err))
+            .finally(() => console.log("fetching is completed"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
