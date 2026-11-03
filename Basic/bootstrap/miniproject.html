@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="row ">
+            <!-- main content  -->
+            <div class="col-3 my-2  shadow-lg rounded  my-3 mx-auto ">
+                <form class="p-3">
+                    <h4 class="  col-4 mx-auto">Conversion</h4>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="text" class="form-control" id="amount" aria-describedby="usernameHelp">
+
+                    </div>
+                    <h6 class="mt-4"> From:</h6>
+                    <select class="form-select" id="from" aria-label="Default select example">
+                        <option selected>Select the From Country</option>
+                        <option value="INR">Indian</option>
+                        <option value="USD">American</option>
+                        
+                    </select>
+                    <h6 class="mt-4"t>To:</h6>
+                    <select class="form-select "  id="to" aria-label="Default select example">
+                        <option selected>Select the To Country</option>
+                        <option value="INR">Indian</option>
+                        <option value="USD">American</option>
+                        
+                    </select>
+
+
+                    <button type="submit" onclick="convert()" class="btn btn-primary my-4   ">Submit</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function convert() {
+            event.preventDefault();
+            const amount = +document.getElementById("amount").value;
+            const from = document.getElementById("from").value;
+            const to = document.getElementById("to").value;
+            console.log(amount, from, to)
+            fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+            .then(resp => resp.json)
+            .then(data => {
+                console.log(data);
+                    
+            })
+            .catch(err => console.log(err))
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -3,6 +3,7 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Home from './Home.jsx'
 
 // create vite@latest "app name"
 // react
@@ -28,9 +29,16 @@ import './App.css'
 
 function App() {
   // const [count, setCount] = useState(0)
+  const username = "Aditya";
 
   return (
-    <h1>Welcome to Vite + React</h1>
+    <>
+    <h1 style={{color: 'red'}}>Welcome to Vite + React</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, id.</p>
+    <h3>Welcome {username}</h3>
+    <Home/>
+    </>
+
   )
 }
 
