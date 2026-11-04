@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Home from './Home.jsx'
+import Counter from './Counter.jsx'
 
 // create vite@latest "app name"
 // react
@@ -27,16 +28,20 @@ import Home from './Home.jsx'
 // 5:Virtual DOM:-
 // React utilizes a virtual DOM, which is an in memory representation of the actual DOM. When the state of a component changes, React updates the virtual DOM and efficiently calculates the minimal set of changes needed to update the real DOM. This process, known as reconciliation, improves performance and reduces unnecessary re-rendering of components.
 
+
+// state management is a crucial aspect of React development, as it allows components to maintain and update their own data. React provides a built-in state management mechanism through the useState hook, which enables functional components to have local state. Additionally, for more complex applications, developers can utilize external state management libraries like Redux or MobX to manage global state across multiple components.
 function App() {
   // const [count, setCount] = useState(0)
   const username = "Aditya";
-
+  
   return (
     <>
     <h1 style={{color: 'red'}}>Welcome to Vite + React</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, id.</p>
     <h3>Welcome {username}</h3>
+    
     <Home/>
+    <Counter/>
     </>
 
   )
